@@ -2,7 +2,7 @@
    ################################
    ImagesStatus.js
    ################################
-   + A fork of https://github.com/raphamorim/imgstatus Rewritten and enhanced with a simple way to detect images loading
+   + Based on https://github.com/raphamorim/imgstatus Rewritten and enhanced with a simple way to detect images loading
    + version 0.1
    + Made with love by medBouzid
    + Credit to Raphael Amorim
