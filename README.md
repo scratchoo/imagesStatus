@@ -57,3 +57,11 @@ $(".imageContainerDiv").imagesStatus({
  });
 
 ```
+
+## Feedback
+
+Please use the [Issues](https://github.com/medBouzid/imagesStatus/issues) for any bugs, feature requests, etc.
+
+## License
+
+MIT License
