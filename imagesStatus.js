@@ -63,12 +63,27 @@
     }
 
     ImagesStatus.prototype = {
+       
+        // Check if browser support srcset
+        isSrcsetSupported: function(img) {
+           
+           return img.srcset && img.sizes;
+           
+        },
 
-        isCached: function(src) {
-
+        isCached: function(img) {
+            
             var image = new Image();
-
-            image.src = src;
+            
+            if(this.isSrcsetSupported(image) && img.srcset){ // if browser supports srcset and the passed image has srcset attribute
+               
+               image.srcset = img.srcset;
+               
+               image.sizes = img.sizes;
+               
+            }
+           
+            image.src = img.src;
 
             return image.complete;
 
@@ -139,7 +154,7 @@
 
         for (var i = 0; i < self.status.total; i++) {
 
-            if (self.isCached(images[i].src)){
+            if (self.isCached(images[i])){
 
                 self.setLoaded(options, images[i]);
 
